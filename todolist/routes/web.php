@@ -13,3 +13,6 @@ Route::get('/', [TaskController::class, 'index']);
 
 // Llamar el metodo que procesa y registra datos
 Route::post('/', [TaskController::class, 'store']);
+
+//task destroy 
+Route::delete('/{id}', [TaskController::class,'destroy'])->name('task.destroy');

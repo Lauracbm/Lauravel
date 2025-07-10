@@ -17,14 +17,21 @@
 
     <table border="1">
         <tr>
-            <td>Nombre Tarea</td>
-            <td>Acción</td>
+            <td><b>Nombre Tarea</b></td>
+            <td><b>Acción</b></td>
         </tr>
-
+        @foreach($tasks as $task)
          <tr>
-            <td>Nombre Tarea 1</td>
-            <td>Acción 2</td>
+            <td>{{ $task->task}}</td>
+            <td>
+                <form action="{{ route ('task.destroy', $task->id)}}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" value="x">
+                </form>
+            </td>
         </tr>
+        @endforeach
     </table>
     
 </body>
