@@ -10,7 +10,7 @@
 
 <body class="bg-gray-900  m-3 text-amber-50 flex flex-col justify-center mx-100 my-30 ">
 
-    <section class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-xl shadow-lg shadow-gray-700 flex flex-col p-15 w-2xl justify-center items-center">
+    <section class="bg-gradient-to-b from-purple-800 to-gray-900 rounded-xl shadow-lg shadow-gray-700 flex flex-col p-15 w-2xl justify-center items-center">
 
         <blockquote>
             <h1 class="text-3xl text-center font-bold mb-4">Lista de Tareas</h1>
@@ -37,7 +37,7 @@
                 <td>
                     <form action="{{ route ('task.destroy', $task->id)}}" method="post" class="flex justify-center items-center">
                         @csrf
-                        @method('DELETE')
+                        @method('delete')
                         <input type="submit" value="x" class="bg-red-500  rounded-3xl border-red-500 w-10 text-center font-bold text-white pb-1 hover:size-8 hover:bg-red-700 transition duration-10 ease-in-out">
                     </form>
                 </td>
