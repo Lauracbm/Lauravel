@@ -18,6 +18,10 @@
         <button type="submit">Sumar</button>
     </form>
     <br>
+
+     @if(isset($res))
+        <h1>RESULTADO: {{$res}}</h1>
+        @endif
     
 </body>
 </html>

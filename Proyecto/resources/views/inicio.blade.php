@@ -6,8 +6,6 @@
     <title>Document</title>
 </head>
 <body class="bg-purple-100">
-    @if(isset($res))
-        <h1>RESULTADO: {{$res}}</h1>
-        @endif
+   
 </body>
 </html>
