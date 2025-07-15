@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SumaController;
+use App\Http\Controllers\ProductoController;
+use App\Models\Producto;
 
 Route::get('/', function () {
     return view('welcome');
@@ -14,19 +16,22 @@ Route::get('/inicio', function () {
     return view('inicio');
 });
 
-/*Route::get('/suma', function () {
-    return view('suma');
-});*/
+//get vistas 
+//post crud
 
 Route::get('/suma', [SumaController::class, 'index']);
 
-Route::post('/suma', function ( Request $request ) {
+Route::post('/suma', [SumaController::class, 'suma']);
 
-    $num1 = $request->input('num1');
-    $num2 = $request->input('num2');
-    $resultado= $num1 + $num2;
+Route::get('/productos', [ProductoController::class, 'index'])->name('list');
 
- 
-    return view('suma', ['res'=>$resultado]);
-});
+Route::get('/RegProductos', [ProductoController::class, 'RegProduct']);
+
+Route::post('/Guardar', [ProductoController::class, 'Guardar'])->name('GuardarRoute');
+
+
+
+
+
+
 
