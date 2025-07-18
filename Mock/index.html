@@ -8,11 +8,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="bg-gradient-to-b from-blue-950 to-blue-500">
 
     <header class="w-full top-0 z-50">
         <nav class="max-w-screen-2xl mx-auto">
-            <div id="top" class="bg-[#F7F9F9] flex justify-center items-center p-4 gap-7">
+            <div id="top" class="bg-[#F7F9F9] flex justify-center items-center p-4 gap-10 h-24">
 
                 <a class=" bg-gradient-to-tr from-yellow-300 via-pink-600 to-purple-600 p-2 size-10 flex items-center justify-center rounded-full hover:scale-110 transition-transform"
                     href="https://colegiobilinguecedam.com" target="_blank" aria-label="Instagram" title="Ir a IG">
@@ -21,20 +21,25 @@
                     </svg>
                 </a>
 
-                <img src="IMG/logo_sin_fondo.png" alt="logo" class="h-20">
+                <div class="flex flex-row items-center gap-4">
+                <img src="IMG/logo_sin_fondo.png" alt="logo" class="h-16">
                 <h1 class="text-2xl font-bold text-gray-800 ">Colegio Bilingüe Cedam</h1>
+                </div>
 
-                <a class="bg-gradient-to-br from-blue-700 via-blue-500 to-slate-300 p-2 size-10 flex items-center justify-center rounded-full hover:scale-110 transition-transform "
+                <a class=" to-slate-300 p-2 size-10 flex items-center justify-center rounded-full hover:scale-110 transition-transform "
                     href="https://colegiobilinguecedam.com">
                     <svg width="50" height="50">
                         <use xlink:href="./assets/spritee.svg#facebook"/>
                     </svg>
                 </a>
             </div>
-            <svg viewBox="100 100 1440 237" class="w-full">
+            <!--Cloud-->
+            <svg viewBox="0 150 1400 324" class=" z-10" >
                 <use xlink:href="Assets\sprite.svg#cloud"></use>
-            </svg>
-            <ul class="flex justify-center items-center gap-10 font-bold text-white p-4 h-20 relative z-10 -mt-60">
+            </svg> 
+            <!--nav-->
+            <ul class=" m-10 flex justify-between items-center font-bold text-white p-4 h-16 relative z-20 -mt-88 mb-8 ">
+
                 <li class="bg-pink-500 h-10 px-6 border-none rounded-[50px] flex items-center justify-center min-w-[120px]" >
                     <a href="">Galeria</a>
                 </li>
@@ -55,7 +60,7 @@
     </header>
 
     <section id="hero"
-        class="bg-gradient-to-t from-blue-900 to-blue-500 h-[500px] max-w-screen-2xl flex flex-col justify-center items-center text-white relative z-0 mx-auto mt-0">
+        class="bg-gradient-to-b from-blue-950 to-blue-500 h-[500px] max-w-screen-2xl flex flex-col justify-center items-center text-white relative z-0">
         <container class="flex flex-row justify-between items-center gap-20">
             <div id="left">
                 <div id="About"
@@ -134,8 +139,11 @@
                     <label for="name">Nombre:</label>
                     <input type="text" id="name" name="name" class="rounded-md border">
 
-                    <label for="email">Correo Electrónico:</label>
+                    <label for="email">email:</label>
                     <input type="email" id="email" name="email" class="rounded-md border">
+
+                    <label for="name">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" class="rounded-md border">
 
                     <label for="message">Mensaje:</label>
                     <textarea id="message" name="message" rows="4" class="rounded-md border"></textarea>
@@ -147,20 +155,20 @@
             <div>
                 <div id="map">
                     <iframe src="https://www.google.com/maps" width="400" height="250" style="border:0;"
-                        allowfullscreen="" loading="lazy"></iframe>
+                        allowfullscreen=" "></iframe>
                 </div>
 
                 <div id="info">
                     <p>Direccio</p>
-                    <p>Lorem ipsum, dolor sit</p>
-                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Preschool and Elementary: Calle 2 B # 27 A - 02 Int. 2 Santa Isabel.</p>
+                    <p>Highschool: Calle 2 B # 27 A - 02 Int. 2 Santa Isabel</p>
                 </div>
             </div>
 
     </section>
 
     <footer>
-        <svg viewBox="0 0 1440 344">
+        <svg viewBox="0 0 1440 344" fill="#F7F9F9">
             <use xlink:href="Assets\sprite.svg#cloud-bottom"></use>
 
         </svg>
