@@ -8,8 +8,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
-
-
         /* Specific styles for the thumbnails to ensure they are visible and interactable */
         .myThumb .swiper-slide-thumb-active {
             opacity: 1;
@@ -38,11 +36,6 @@
             /* Make wrapper take full height of container */
         }
 
-        /* For the main swiper's pagination if you want to customize it */
-        .mySwiper .swiper-pagination-bullet {
-            background-color: white;
-            /* Change bullet color if needed */
-        }
 
         .mySwiper .swiper-pagination-bullet-active {
             background-color: #007aff;
@@ -96,7 +89,7 @@
                     </li>
                     <li
                         class="bg-pink-500 h-10 px-6 border-none rounded-[50px] flex items-center justify-center min-w-[120px]">
-                        <a href=""> Gestión academíca</a>
+                        <a href=""> Gestión académica</a>
                     </li>
                     <li
                         class="bg-green-500 h-10 px-6 border-none rounded-[50px] flex items-center justify-center min-w-[120px]">
@@ -114,31 +107,31 @@
             class="bg-gradient-to-b from-blue-950 to-blue-500 h-[400px] max-w-screen-2xl mX-auto flex flex-row justify-center items-center text-white relative -mt-2 z-10 gap-32">
             <div class="flex flex-row justify-between items-center gap-5">
                 <div id="swiper-container"
-                    class="flex flex-row justify-center items-center p-10 gap-5 bg-gray-100 bg-opacity-25 border rounded-lg h-[350px]">
-                    <div id="thumbsSlider" class="swiper myThumb w-10 h-[250px]">
+                    class="flex flex-row justify-center items-center p-10 gap-5 bg-white bg-opacity-10 border rounded-lg h-[350px]">
+                    <div id="thumbsSlider" class="swiper myThumb w-15 h-[350px]">
                         <div class="swiper-wrapper flex flex-col gap-6">
                             <div class="swiper-slide">
                                 <img src="IMG/Captura de pantalla 2025-07-17 092722.png"
-                                    class="size-10 object-cover rounded" />
+                                    class="size-20 object-cover rounded" />
                             </div>
                             <div class="swiper-slide">
                                 <img src="https://swiperjs.com/demos/images/nature-2.jpg"
-                                    class="size-10 object-cover rounded" />
+                                    class="size-20 object-cover rounded" />
                             </div>
                             <div class="swiper-slide">
                                 <img src="https://swiperjs.com/demos/images/nature-3.jpg"
-                                    class="size-10 object-cover rounded" />
+                                    class="size-20 object-cover rounded" />
                             </div>
                             <div class="swiper-slide">
                                 <img src="https://swiperjs.com/demos/images/nature-4.jpg"
-                                    class="size-10 object-cover rounded" />
+                                    class="size-20 object-cover rounded" />
                             </div>
                             <div class="swiper-slide">
                                 <img src="https://swiperjs.com/demos/images/nature-5.jpg"
-                                    class="size-10 object-cover rounded" />
+                                    class="size-20 object-cover rounded" />
                             </div>
                         </div>
-                        
+
                     </div>
                     <div class="swiper mySwiper h-[300px] w-[500px] relative">
                         <div class="swiper-wrapper">
@@ -181,19 +174,16 @@
         <script>
             var swiper = new Swiper(".myThumb", {
                 loop: true,
-                direction: "vertical", // Thumbs usually work best vertical
+                direction: "vertical",
                 slidesPerView: 4,
                 freeMode: true,
                 watchSlidesProgress: true,
-                navigation: {
-                    nextEl: ".myThumb .swiper-button-next", // Be specific about which button it controls
-                    prevEl: ".myThumb .swiper-button-prev",
-                },
+
             });
             var swiper2 = new Swiper(".mySwiper", {
                 loop: true,
                 pagination: {
-                    el: ".mySwiper .swiper-pagination", // Be specific about pagination
+                    el: ".mySwiper .swiper-pagination",
                     clickable: true,
                 },
                 thumbs: {
@@ -208,7 +198,8 @@
         <path d="M0 0v4s250 96 500 96 500-96 500-96V0H0Z" fill="#3b82f6"></path>
     </svg>
 
-    <section id="About us" class="bg-[#F7F9F9] h-[700px] max-w-screen-2xl p-15 flex flex-col items-center gap-15 p-5 pt-10">
+    <section id="About us"
+        class="bg-[#F7F9F9] h-[700px] max-w-screen-2xl p-15 flex flex-col items-center gap-15 p-5 pt-10">
         <h1 class="text-green-600 font-bold text-2xl">¿Quienes somos?</h1>
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et molestias, perferendis accusamus soluta rerum
@@ -217,60 +208,60 @@
             quibusdam vel! Minus vel animi qui cumque perspiciatis.</p>
 
 
-       
-            <div class="p-10 flex flex-col gap-5">
-                <div id="crayon">
+
+        <div class="p-10 flex flex-col gap-5">
+            <div id="crayon">
 
 
 
-                    <a class="bg-gradient-to-tr from-blue-950 via-blue-500 to-gray-200 p-2 size-10 flex items-center justify-center hover:scale-110 transition-transform "
-                        href="https://www.facebook.com/Colegiobilinguecedam">
-                        <svg width="50" height="50">
-                            <use xlink:href="./assets/spritee.svg#facebook" />
-                        </svg>
-                    </a>
+                <a class="bg-gradient-to-tr from-blue-950 via-blue-500 to-gray-200 p-2 size-10 flex items-center justify-center hover:scale-110 transition-transform "
+                    href="https://www.facebook.com/Colegiobilinguecedam">
+                    <svg width="50" height="50">
+                        <use xlink:href="./assets/spritee.svg#facebook" />
+                    </svg>
+                </a>
 
-                    <div id="text" class="flex flex-row justify-between gap-10">
-                        <p class="line-clamp-3 w-[300px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Possimus
-                            labore, dolores facilis consequatur quibusdam et omnis. Libero soluta molestias obcaecati
-                            eum
-                            natus maiores quam iste tempora perferendis, ut, corrupti dolores quaerat explicabo vitae
-                            in.
-                            Repudiandae quaerat soluta aperiam nostrum ipsum. Incidunt eum sit modi molestiae voluptatum
-                            quia labore cupiditate omnis.</p>
-
-
-                        <h3>Mision</h3>
-                    </div>
-
-                </div>
+                <div id="text" class="flex flex-row justify-between gap-10">
+                    <p class="line-clamp-3 w-[300px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Possimus
+                        labore, dolores facilis consequatur quibusdam et omnis. Libero soluta molestias obcaecati
+                        eum
+                        natus maiores quam iste tempora perferendis, ut, corrupti dolores quaerat explicabo vitae
+                        in.
+                        Repudiandae quaerat soluta aperiam nostrum ipsum. Incidunt eum sit modi molestiae voluptatum
+                        quia labore cupiditate omnis.</p>
 
 
-                <div id="crayon">
-
-                    <!--vision-->
-
-                    <div id="text" class="flex flex-row items-center justify-between gap-30">
-
-                        <h3>Vision</h3>
-
-                        <p class="line-clamp-3 w-[300px]">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Reiciendis dolore laborum sunt quae
-                            nisi debitis vitae dolor impedit quis dolores?</p>
-
-                    </div>
-
-                    <a class="bg-gradient-to-tr from-blue-950 via-blue-500 to-gray-200 p-2 size-10 flex items-center  hover:scale-110 transition-transform "
-                        href="https://colegiobilinguecedam.com">
-                        <svg width="50" height="50">
-                            <use xlink:href="./assets/spritee.svg#facebook" />
-                        </svg>
-                    </a>
-
+                    <h3>Mision</h3>
                 </div>
 
             </div>
+
+
+            <div id="crayon">
+
+                <!--vision-->
+
+                <div id="text" class="flex flex-row items-center justify-between gap-30">
+
+                    <h3>Vision</h3>
+
+                    <p class="line-clamp-3 w-[300px]">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Reiciendis dolore laborum sunt quae
+                        nisi debitis vitae dolor impedit quis dolores?</p>
+
+                </div>
+
+                <a class="bg-gradient-to-tr from-blue-950 via-blue-500 to-gray-200 p-2 size-10 flex items-center  hover:scale-110 transition-transform "
+                    href="https://colegiobilinguecedam.com">
+                    <svg width="50" height="50">
+                        <use xlink:href="./assets/spritee.svg#facebook" />
+                    </svg>
+                </a>
+
+            </div>
+
+        </div>
 
 
     </section>
@@ -285,8 +276,19 @@
             <div id="list" class="flex flex-row justify-evenly items-center gap-30 p-10">
 
 
-                <ul>
-                    <li>ingles</li>
+                <ul class="text-black">
+                    <li class="bg-slate-100 border-none rounded-xl flex flex-col ">
+
+                        <a class=" bg-gradient-to-tr from-yellow-300 via-pink-600 to-purple-600 p-2 size-10 flex items-center justify-center rounded-full hover:scale-110 transition-transform"
+                        href="https://www.instagram.com/colegiobilinguecedam/?igshid=1jg4e4rkaq2mo" target="_blank"
+                        aria-label="Instagram" title="Ir a IG">
+                        <svg width="28" height="28">
+                            <use xlink:href="./Assets/spritee.svg#instagram" />
+                        </svg>
+                    </a>
+                        
+                    ingles
+                    </li>
                     <li>ensamble</li>
                     <li>tecnica vocal</li>
                 </ul>
@@ -304,32 +306,33 @@
 
     <div class="bg-blue-950">
         <section id="contacto"
-            class="bg-gradient-to-t from-blue-950 to-blue-500 h-[400px] max-w-screen-2xl flex flex-col justify-center items-center text-white z-30">
-            <div class="flex flex-row justify-center items-center gap-40 h-[200px]">
-                <form action="">
-                    <div class="flex flex-col gap-1">
-                        <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="name" class="rounded-xl border">
+            class="bg-gradient-to-t from-blue-950 to-blue-500 h-[600px] max-w-screen-2xl flex flex-col gap-30 justify-center items-center text-white z-30 ">
+                <div id="c" class="flex flex-row justify-center items-center gap-40 h-[200px] mt-10 ">
+                    <form action="">
+                        <div class="flex flex-col gap-1">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" class="rounded-xl border">
 
-                        <label for="email">email:</label>
-                        <input type="email" id="email" name="email" class="rounded-md border">
+                            <label for="email">email:</label>
+                            <input type="email" id="email" name="email" class="rounded-md border">
 
-                        <label for="name">Asunto:</label>
-                        <input type="text" id="asunto" name="asunto" class="rounded-md border">
+                            <label for="name">Asunto:</label>
+                            <input type="text" id="asunto" name="asunto" class="rounded-md border">
 
-                        <label for="message">Mensaje:</label>
-                        <textarea id="message" name="message" rows="3" class="rounded-md border"></textarea>
+                            <label for="message">Mensaje:</label>
+                            <textarea id="message" name="message" rows="3" class="rounded-md border"></textarea>
 
-                        <button type="submit">Enviar</button>
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+
+                    <!--Video-->
+                    <div>
+                        <video src=""></video>
                     </div>
-                </form>
-
-                <!--Video-->
-                <div>
-
                 </div>
 
-                <div>
+                <div class="flex flex-col  gap-10 -mb-20">
 
                     <!--Contact info-->
                     <div id="info" class="flex flex-row">
@@ -347,7 +350,7 @@
 
                     <!--Map-->
                     <div id="map">
-                        <iframe src="https://www.google.com/maps" width="400" height="250" style="border:0;"
+                        <iframe src="https://www.google.com/maps" width="900" height="250" style="border:0;"
                             allowfullscreen=" "></iframe>
                     </div>
                 </div>
@@ -356,7 +359,7 @@
 
 
         <footer>
-            <svg viewBox="0 0 1440 344">
+            <svg viewBox="0 0 1440 220">
                 <use xlink:href="Assets\sprite.svg#cloud-bottom"></use>
 
             </svg>
@@ -383,7 +386,7 @@
                         </svg>
                     </a>
 
-                    <a class=" bg-gradient-to-tr from-green-400 to-green-700 p-2 size-10 flex items-center justify-center rounded-full hover:scale-110 transition-transform"
+                    <a class=" bg-gradient-to-tr from-green-400 to-green-950 p-2 size-10 flex items-center justify-center rounded-full hover:scale-110 transition-transform"
                         href="https://www.instagram.com/colegiobilinguecedam/?igshid=1jg4e4rkaq2mo" target="_blank"
                         aria-label="Instagram" title="Ir a IG">
                         <svg width="28" height="28">
