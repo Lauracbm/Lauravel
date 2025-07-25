@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Thumbs Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        /* Optional: Add some basic styling for swiper navigation to make them visible */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: black; /* Make sure they are visible on a light background */
+            background-color: rgba(255, 255, 255, 0.7); /* Add a background for contrast */
+            padding: 0.5rem;
+            border-radius: 50%;
+            width: 2rem; /* Adjust size */
+            height: 2rem; /* Adjust size */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute; /* Ensure correct positioning */
+            z-index: 10; /* Ensure they are above other content */
+        }
+        .swiper-button-prev {
+            left: 10px;
+        }
+        .swiper-button-next {
+            right: 10px;
+        }
+
+        /* Specific styles for the thumbnails to ensure they are visible and interactable */
+        .myThumb .swiper-slide-thumb-active {
+            opacity: 1;
+            border: 2px solid #007aff; /* Highlight active thumbnail */
+        }
+        .myThumb .swiper-slide img {
+            opacity: 0.7; /* Dim inactive thumbnails */
+            transition: opacity 0.3s;
+        }
+        .myThumb .swiper-slide-thumb-active img {
+            opacity: 1; /* Full opacity for active thumbnail */
+        }
+
+        /* Ensure thumb wrapper is visible for vertical layout */
+        .myThumb .swiper-wrapper {
+            flex-direction: column; /* This is already in your HTML, just noting its importance */
+            justify-content: center; /* Center thumbs vertically */
+            height: 100%; /* Make wrapper take full height of container */
+        }
+
+        /* For the main swiper's pagination if you want to customize it */
+        .mySwiper .swiper-pagination-bullet {
+            background-color: white; /* Change bullet color if needed */
+        }
+        .mySwiper .swiper-pagination-bullet-active {
+            background-color: #007aff; /* Active bullet color */
+        }
+
+    </style>
+</head>
+<body>
+
+    <section id="hero"
+        class="bg-gradient-to-b from-blue-950 to-blue-500 h-[400px] max-w-screen-2xl mx-auto flex flex-col justify-center items-center text-white relative -mt-2 z-10">
+        <div class="flex flex-row justify-between items-center gap-5"> <div id="swiper-container"
+                class="flex flex-row justify-center items-center p-5 gap-5 bg-gray-100 bg-opacity-25 border rounded-lg h-[350px]"> <div thumbsSlider="" class="swiper myThumb h-full w-20"> <div class="swiper-wrapper flex flex-col gap-4">
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" class="size-8 object-cover rounded" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" class="size-8 object-cover rounded" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" class="size-8 object-cover rounded" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" class="size-8 object-cover rounded" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" class="size-8 object-cover rounded" />
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div class="swiper mySwiper h-[300px] w-[500px] relative"> <div class="swiper-wrapper">
+                        <div class="swiper-slide flex justify-center items-center"> <img src="https://swiperjs.com/demos/images/nature-1.jpg" class="size-full object-cover" /> </div>
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" class="size-full object-cover" />
+                        </div>
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" class="size-full object-cover" />
+                        </div>
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" class="size-full object-cover" />
+                        </div>
+                        <div class="swiper-slide flex justify-center items-center">
+                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" class="size-full object-cover" />
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".myThumb", {
+            loop: true,
+            direction: "vertical", // Thumbs usually work best vertical
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+            navigation: {
+                nextEl: ".myThumb .swiper-button-next", // Be specific about which button it controls
+                prevEl: ".myThumb .swiper-button-prev",
+            },
+        });
+        var swiper2 = new Swiper(".mySwiper", {
+            loop: true,
+            pagination: {
+                el: ".mySwiper .swiper-pagination", // Be specific about pagination
+                clickable: true,
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    </script>
+</body>
+</html>
