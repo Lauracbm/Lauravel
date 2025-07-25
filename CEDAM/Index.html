@@ -19,7 +19,7 @@
                         href="https://www.instagram.com/colegiobilinguecedam/?igshid=1jg4e4rkaq2mo" target="_blank"
                         aria-label="Instagram" title="Ir a IG">
                         <svg width="28" height="28">
-                            <use xlink:href="./Assets/spritee.svg#instagram"  />
+                            <use xlink:href="./Assets/spritee.svg#instagram" />
                         </svg>
                     </a>
 
@@ -70,9 +70,80 @@
         <section id="hero"
             class="bg-gradient-to-b from-blue-950 to-blue-500 h-[400px] max-w-screen-2xl flex flex-col justify-center items-center text-white relative -mt-2 z-10">
             <container class="flex flex-row justify-between items-center gap-20">
-                <div id="swipper">
-                    aqui va el swipper
+                <!--Swipper-->
+                <div id="swiper-container"
+                    class="flex flex-row justify-center items-center p-5 gap-20 bg-slate-300 bg-opacity-95 border rounded-lg h-[400px]">
+                    <!--thumb controller-->
+                    <div thumbsSlider="" class="swiper myThumb ">
+                        <div class="swiper-wrapper  flex flex-col gap-4">
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" class="size-8" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-2.jpg" class="size-8" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" class="size-8" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-4.jpg" class="size-8" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-5.jpg" class="size-8" />
+                            </div>
+                        </div>
+                        <!--controls-->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <!--Main swipper-->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper flex flex-row gap-4">
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" class="size-52" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-2.jpg" class="size-52" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" class="size-52" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-4.jpg" class="size-52" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-5.jpg" class="size-52" />
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
                 </div>
+                <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".myThumb", {
+      loop: true,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    var swiper2 = new Swiper(".mySwiper", {
+      loop: true,
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+  </script>
+
+
+
                 <div id="cam" class="flex flex-row">
                     <img src="./IMG/camila.png" alt="camila-paint-buckets">
                 </div>
@@ -88,7 +159,10 @@
     <section id="About us" class="bg-[#F7F9F9] h-[400px] max-w-screen-2xl p-15 flex flex-col items-center gap-15 p-5">
         <h1 class="text-green-600 font-bold text-2xl">¿Quienes somos?</h1>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et molestias, perferendis accusamus soluta rerum illo pariatur quaerat in voluptas. Natus saepe facilis ut tempore libero aut, asperiores ullam, consequuntur, fugit quam perferendis nulla. Natus dolorum iste debitis quaerat, facilis quos dolorem ad quibusdam vel! Minus vel animi qui cumque perspiciatis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et molestias, perferendis accusamus soluta rerum
+            illo pariatur quaerat in voluptas. Natus saepe facilis ut tempore libero aut, asperiores ullam,
+            consequuntur, fugit quam perferendis nulla. Natus dolorum iste debitis quaerat, facilis quos dolorem ad
+            quibusdam vel! Minus vel animi qui cumque perspiciatis.</p>
     </section>
 
     <section id="myv" class="bg-[#F7F9F9] h-[400px] max-w-screen-2xl flex flex-col items-center gap-15 p-5">
@@ -205,7 +279,7 @@
                     <!--Contact info-->
                     <div id="info" class="flex flex-row">
                         <div id="card" class="bg-slate-50 h-20 justify-center items-center">
-                            
+
                             <p class="text-black"> Tel: 2016652</p>
                         </div>
                         <div id="card">
